@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 var mysql=require('mysql');
 var index = require('./routes/index');
 var users = require('./routes/users');
+var users1 = require('./routes/users1');
 
 var app = express();
 
@@ -24,7 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
-
+app.use('/users1', users1);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
