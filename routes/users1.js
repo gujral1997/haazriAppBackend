@@ -14,7 +14,7 @@ router.post('/', function(req, res, next) {
     if(err)console.log(err);
     if(row.length>0)
     {
-      res.send({'success':true,'message':row[0].name});
+        res.send({'success':true,'message':row});
     }
     else {
       res.send({'success':false,'message':'Student not found, please try again'});
