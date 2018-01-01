@@ -9,7 +9,8 @@ var connection=mysql.createConnection({
 });
 router.post('/', function(req, res, next) {
   var status=req.body.status;
-  connection.query("SELECT * FROM student",function(err,row,fields)
+  var id=req.body.id;
+  connection.query("UPDATE login SET STATUS=? WHERE ID=?",[id,status],function(err,row,fields)
   {
     if(err)console.log(err);
     res.send({'success':true,'message':row});
