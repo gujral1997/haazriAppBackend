@@ -20,7 +20,7 @@ router.post('/', function(req, res, next) {
       res.send({'success':true,'message':row[0].userName});
     }
     else {
-      res.send({'success':false,'message':'User not found, please try again'});
+      res.send({'success':false,'message':'Either USERNAME or PASSWORD is wrong, please try again'});
     }
   });
 });
