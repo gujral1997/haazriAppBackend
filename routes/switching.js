@@ -8,12 +8,12 @@ var connection=mysql.createConnection({
   database:'haazriLogin',
 });
 router.post('/', function(req, res, next) {
-  var status=req.body.status;
-  var id=req.body.id;
-  connection.query("UPDATE login SET STATUS=? WHERE ID=?",[id,status],function(err,row,fields)
+  var value=req.body.value;
+  var name=req.body.name;
+  connection.query("UPDATE student SET status=? WHERE name=?",[value,name],function(err,row,fields)
   {
     if(err)console.log(err);
-    res.send({'success':true,'message':row});
+    res.send({'success':true,'message':'Status of '+value+' updated'});
   });
 });
 module.exports = router;
