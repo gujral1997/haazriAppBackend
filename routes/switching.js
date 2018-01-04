@@ -13,7 +13,19 @@ router.post('/', function(req, res, next) {
   connection.query("UPDATE student SET status=? WHERE name=?",[value,name],function(err,row,fields)
   {
     if(err)console.log(err);
-    res.send({'success':true,'message':'Status of '+value+' updated'});
+    function status(value)
+    {
+      if (value==='false')
+      {
+        return 'absent'
+      }
+      else {
+        {
+          return 'present'
+        }
+      }
+    }
+    res.send({'success':true,'message':'Status of '+name+' has been updated to '+status(value)});
   });
 });
 module.exports = router;
