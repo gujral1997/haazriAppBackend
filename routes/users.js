@@ -12,7 +12,7 @@ router.post('/', function(req, res, next) {
   var userName=req.body.userName;
   //had to encrypt password in future,right now storing as a string
   var password=req.body.password;
-  connection.query("SELECT * FROM login WHERE userName= ? AND password= ?",[userName,password],function(err,row,fields)
+  connection.query("SELECT * FROM login WHERE BINARY userName= ? AND BINARY password= ?",[userName,password],function(err,row,fields)
   {
     if(err)console.log(err);
     if(row.length>0)

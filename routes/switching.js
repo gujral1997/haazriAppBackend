@@ -25,7 +25,7 @@ router.post('/', function(req, res, next) {
         }
       }
     }
-    res.send({'success':true,'message':'Status of '+name+' has been updated to '+status(value)});
+    res.send({'success':true,'message':name+'\'s status changed to '+status(value)});
   });
 });
 module.exports = router;
