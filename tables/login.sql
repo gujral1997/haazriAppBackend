@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 20, 2018 at 08:22 AM
+-- Generation Time: Mar 20, 2018 at 12:42 PM
 -- Server version: 5.7.21-0ubuntu0.16.04.1
 -- PHP Version: 7.0.25-0ubuntu0.16.04.1
 
@@ -37,7 +37,7 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`id`, `userName`, `password`) VALUES
-(1, 'Ansh Gujral', '1234');
+(1, 'ansh', '1234');
 
 --
 -- Indexes for dumped tables
