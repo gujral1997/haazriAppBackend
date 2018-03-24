@@ -9,6 +9,7 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var users1 = require('./routes/users1');
 var switching = require('./routes/switching');
+var images = require('./routes/images');
 
 var app = express();
 
@@ -28,6 +29,8 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/users1', users1);
 app.use('/switching', switching);
+app.use('/images', images);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
