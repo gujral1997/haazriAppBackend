@@ -8,8 +8,7 @@ var connection=mysql.createConnection({
   database:'haazriLogin',
 });
 router.post('/', function(req, res, next) {
-  var name=req.body.name;
-  connection.query("SELECT * FROM student WHERE status = false",function(err,row,fields)
+  connection.query("SELECT * FROM student WHERE status = 'false'",function(err,row,fields)
   {
     if(err)console.log(err);
     if(row.length>0)

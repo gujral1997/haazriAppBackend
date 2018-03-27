@@ -8,7 +8,6 @@ var connection=mysql.createConnection({
   database:'haazriLogin',
 });
 router.post('/', function(req, res, next) {
-  var name=req.body.name;
   connection.query("SELECT * FROM student",function(err,row,fields)
   {
     if(err)console.log(err);
